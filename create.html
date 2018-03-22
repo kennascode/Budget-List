@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+     <head>
+            <title> MY APP </title>
+	    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="style.css" type="text/css">
+     </head>
+	 <nav class="navbar navbar-light bg-dark justify-content-between">
+<img src="image/blll.jpg" width="50" height="50">
+  <a class="navbar-brand"><h1><font face="forte"><font color="white">BUDGET LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></h1></a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<br><br>
+<div class ="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="kenna.html" role="tab" aria-controls="home" aria-selected="true"><font face="forte"><h2>Home</h2></font></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="profile-tab" data-toggle="tab" href="profile.html" role="tab" aria-controls="profile" aria-selected="true"><font face="forte"><h2>Profile</h2></font></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="contact-tab" data-toggle="tab" href="contact.html" role="tab" aria-controls="contact" aria-selected="true"><font face="forte"><h2>Contact</h2></font></a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+     <body>
+   <center>
+   
+      
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">First Name</label>
+    <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter First Name">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name</label>
+    <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div>
+  <button type="button" onclick='_submit()' class="btn btn-dark btn-block">Submit Form to Create Budget  List</button>
+  <button type="button" onclick="reset()" class="btn btn-primary btn-block">Reset</button>
+</form>
+<script>
+function _submit(){
+	var lastname = document.getElementById('lastname');
+	var firstname = document.getElementById('firstname');
+	if(lastname.value && firstname.value){
+		location.href="create1.html";
+	}else{
+		alert('Please fill in the empty box. Thank You!');
+	}
+}	
+function reset(){
+var lastname = document.getElementById('lastname');
+	var firstname = document.getElementById('firstname');
+	lastname.value = "";
+	firstname.value = "";	
+	firstname.autofocus;
+	
+}
+</script>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+	 
+      form.classList.add('was-validated');
+    }, false);
+  }, false);
+})();
+</script>
+ 
+</center>
+
+</body>
+</html>

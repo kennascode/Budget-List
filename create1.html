@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+ <title> MY APP </title>
+	    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="style.css" type="text/css">
+     </head>
+
+   
+      
+<nav class="navbar navbar-light bg-dark justify-content-between">
+<img src="image/blll.jpg" width="50" height="50">
+  <a class="navbar-brand"><h1><font face="forte"><font color="white">BUDGET LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></h1></a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<br><br>
+<div class ="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="kenna.html" role="tab" aria-controls="home" aria-selected="true"><font face="forte"><h2>Home</h2></font></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="profile-tab" data-toggle="tab" href="profile.html" role="tab" aria-controls="profile" aria-selected="true"><font face="forte"><h2>Profile</h2></font></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="contact-tab" data-toggle="tab" href="contact.html" role="tab" aria-controls="contact" aria-selected="true"><font face="forte"><h2>Contact</h2></font></a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+<script src="Storage.js"></script>
+
+<center>
+<body onload="doShowAll()">
+	<h1><font face="broadway">Enter Items and their Prices</font></h1>
+	
+	<form class="container" id="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom03">Item Name</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Item Name" required>
+      <div class="invalid-feedback">
+        Please fill in the empty space.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">Budget</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Budget" required>
+      <div class="invalid-feedback">
+        Please fill in the empty box.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Actual Price</label>
+      <input type="text" class="form-control" id="validationCustom05" placeholder="Actual Price" required>
+      <div class="invalid-feedback">
+        Please provide actual price.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-dark" type="submit">Save</button>
+    <button class="btn btn-dark" type="submit"><a href="read.html">Read</a></button>
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  }, false);
+})();
+</script>
+          <br><br>
+		  <h6>Saving Progress</h6>
+		  					    <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">25% Saved</div>
+</div>
+<br><br>
+			<a href="read.html"><h5><font color="white"><i>Wanna see how much you've budgeted??<br><u></u></i></font></h5></a>
+		</div>
+	</form>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="create.html"><button type="button" class="btn btn-dark">Back</button> </a>
+</center>
+</body>
+</html>
